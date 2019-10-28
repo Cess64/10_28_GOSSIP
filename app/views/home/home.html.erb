@@ -1,0 +1,17 @@
+<html>
+  <head>
+    <title>The Gossip Project</title>
+  </head>
+  <body>
+    <h1>Bienvenue à toi !!! Moussaille friand de potins...</h1> 
+
+    <% Gossip.all.each_with_index do |gossip, index| %>
+        <p>
+          <%= gossip.user_id %><br/>
+          <%= gossip.title %><br/>
+          <a href="/home/<%= @user_id %>">POTIN</a>
+        </p>
+      <% end %>
+
+  </body>
+</html>

@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>TheGrosSlipProJet</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  </head>
+
+<body>
+
+    <nav class="navbar sticky-top navbar-expand-lg navbar-light bg-info">
+      <a class="navbar-brand" > <%= link_to "Gossip", home_path, class: "nav-link" %> 
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav">
+
+
+
+            <li class="nav-item">
+            <%= link_to "Team", static_team_path, class: "nav-link" %>
+            </li>
+            <li class="nav-item">
+              <%= link_to "Contact", static_contact_path, class: "nav-link" %>
+            </li>
+          </ul>
+        </div>
+    </nav>
+
+    <%= yield %>
+    
+  </body>
+</html>
